@@ -7,12 +7,12 @@
 <title>Isaac Tamblyn</title>
 <link rel="stylesheet" href="emx_nav_left.css" type="text/css">
 <script type="text/javascript">
-<!--
-var time = 3000;
-var numofitems = 7;
+
+let time = 3000;
+let numofitems = 7;
 
 //menu constructor
-function menu(allitems,thisitem,startstate){ 
+menu=(allitems,thisitem,startstate)=>{ 
   callname= "gl"+thisitem;
   divname="subglobal"+thisitem;  
   this.numberofmenuitems = 7;
@@ -22,35 +22,34 @@ function menu(allitems,thisitem,startstate){
 }
 
 //menu methods
-function ehandler(event,theobj){
-  for (var i=1; i<= theobj.numberofmenuitems; i++){
-    var shutdiv =eval( "menuitem"+i+".thediv");
+ ehandler=(event,theobj)=>{
+  for (let i=1; i<= theobj.numberofmenuitems; i++){
+    let shutdiv =eval( "menuitem"+i+".thediv");
     shutdiv.style.visibility="hidden";
   }
   theobj.thediv.style.visibility="visible";
 }
 				
-function closesubnav(event){
+closesubnav=(event)=>{
   if ((event.clientY <48)||(event.clientY > 107)){
-    for (var i=1; i<= numofitems; i++){
-      var shutdiv =eval('menuitem'+i+'.thediv');
+    for (let i=1; i<= numofitems; i++){
+     let shutdiv =eval('menuitem'+i+'.thediv');
       shutdiv.style.visibility='hidden';
     }
   }
 }
-// -->
 </script>
 
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
+  let _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-91911-12']);
   _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  (()=>{
+    let ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    let s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
 </script>
@@ -177,15 +176,10 @@ function closesubnav(event){
         </tr>
         <tr>
           <td>
-
-            <p>
             <h3>Machine Learning at the Nanoscale for Renewable Energy</h3>
-
             <p> The main objective of my research is to apply computational methods to applied problems in material science. Recently, our group has been focused on applying the tools of "data science" to the problem of materials. We are interested particularly interested in using recent advances in deep learning learning and A.I. to develop computationally tractable solutions to hard problems in condensed matter physics, with a focus on applications in the space of renewable energy materials. </p>	
 
-
-
-          </td>
+	 </td>
         </tr>
       </table>
     </td> 
@@ -226,14 +220,14 @@ function closesubnav(event){
 
 <script type="text/javascript">
     <!--
-      var menuitem1 = new menu(7,1,"hidden");
-			var menuitem2 = new menu(7,2,"hidden");
-			var menuitem3 = new menu(7,3,"hidden");
-			var menuitem4 = new menu(7,4,"hidden");
-			var menuitem5 = new menu(7,5,"hidden");
-			var menuitem6 = new menu(7,6,"hidden");
-			var menuitem7 = new menu(7,7,"hidden");
-    // -->
+      let menuitem1 = new menu(7,1,"hidden");
+			let menuitem2 = new menu(7,2,"hidden");
+			let menuitem3 = new menu(7,3,"hidden");
+			let menuitem4 = new menu(7,4,"hidden");
+			let menuitem5 = new menu(7,5,"hidden");
+			let menuitem6 = new menu(7,6,"hidden");
+			let menuitem7 = new menu(7,7,"hidden");
+     //-->
     </script> 
 </body>
 </html>
