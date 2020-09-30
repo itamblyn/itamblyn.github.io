@@ -1,3 +1,3 @@
-# itamblyn.github.io
+# itamblyn - Learn Digitally
 
 Website source
