@@ -1,3 +1,3 @@
 # itamblyn.github.io
-
-Website source
+github websiite
+Website resource
