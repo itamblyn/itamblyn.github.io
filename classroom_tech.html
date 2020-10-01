@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <title>Isaac Tamblyn</title>
+	<h1>Classroom technics</h1>
 <link rel="stylesheet" href="emx_nav_left.css" type="text/css">
 <script type="text/javascript">
 <!--
@@ -22,17 +23,22 @@ function menu(allitems,thisitem,startstate){
 }
 
 //menu methods
-function ehandler(event,theobj){
-  for (var i=1; i<= theobj.numberofmenuitems; i++){
-    var shutdiv =eval( "menuitem"+i+".thediv");
-    shutdiv.style.visibility="hidden";
-  }
-  theobj.thediv.style.visibility="visible";
+function ehandler(event,theobj)
+{
+   for (var i=1; i<= theobj.numberofmenuitems; i++)
+       {
+          var shutdiv =eval( "menuitem"+i+".thediv");
+          shutdiv.style.visibility="hidden";
+       }
+   theobj.thediv.style.visibility="visible";
 }
 				
-function closesubnav(event){
-  if ((event.clientY <48)||(event.clientY > 107)){
-    for (var i=1; i<= numofitems; i++){
+function closesubnav(event)
+{
+  if ((event.clientY <48)||(event.clientY > 107))
+  {
+    for (var i=1; i<= numofitems; i++)
+    {
       var shutdiv =eval('menuitem'+i+'.thediv');
       shutdiv.style.visibility='hidden';
     }
@@ -47,11 +53,12 @@ function closesubnav(event){
   _gaq.push(['_setAccount', 'UA-91911-12']);
   _gaq.push(['_trackPageview']);
 
-  (function() {
+  (function()
+   {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+   })();
 
 </script>
 
@@ -64,11 +71,11 @@ function closesubnav(event){
 
 
 <!-- top_head -->
-<div id="masthead"> 
-  <h1 id="siteName"><big><b>C</b></big>omputational <big><b>L</b></big>aboratory for <big><b>E</b></big>nergy <big><b>A</b></big>nd <big><b>N</b></big>anoscience</h1> 
-  <div id="globalNav"> 
-    <img alt="" src="gblnav_left.gif" height="32" width="4" id="gnl"> <img alt="" src="glbnav_right.gif" height="32" width="4" id="gnr"> 
-    <div id="globalLink"> 
+<div Id="masthead"> 
+  <h1 Id="siteName"><big><b>C</b></big>omputational <big><b>L</b></big>aboratory for <big><b>E</b></big>nergy <big><b>A</b></big>nd <big><b>N</b></big>anoscience</h1> 
+  <div Id="globalNav"> 
+    <img alt="" src="gblnav_left.gif" height="32" width="8" id="gnl"> <img alt="" src="glbnav_right.gif" height="32" width="8" id="gnr"> 
+    <div Id="globalLink"> 
       <a href="http://www.uottawa.ca" target="uoit.ca" class="glink" id="gl1" onmouseover="ehandler(event,menuitem1);">Univesity of Ottawa</a>
 	  <a href="https://science.uottawa.ca/physics/" target="https://science.uottawa.ca/physics/">Department of Physics</a> | 
     </div> 
@@ -76,13 +83,13 @@ function closesubnav(event){
   </div> 
   <!-- end globalNav --> 
   <div id="subglobal1" class="subglobalNav"> 
-    <a href="http://www.uoit.ca" target="www.uoit.ca">University Homepage</a> | 
+        <a href="http://www.uoit.ca" target="www.uoit.ca">University Homepage</a> | 
 	<a href="http://science.uoit.ca" target="science.uoit.ca">Faculty of Science</a> | 
 	<a href="http://gradstudies.uoit.ca" target="gradstudies.uoit.ca/">Faculty of Graduate Studies</a> | 
-	<a href="http://www.uoit.ca/registrar" target="registrar.uoit.ca">Registrar's Office</a> | 
+	<a href="http://www.uoit.ca/registrar" target="registrar.uoit.ca">Registration Office</a> | 
 
   </div> 
-  <div id="subglobal2" class="subglobalNav"> 
+  <div Id="subglobal2" class="subglobalNav"> 
     <a href="http://www.science.uoit.ca/faculty_and_staff/physics-faculty-and-staff--.php" target="physics.uoit.ca">Physics Homepage</a> | 
 	<a href="http://www.science.uoit.ca/faculty_and_staff/deans-office-and-support-staff--.php" target="contact department">Department contact information</a>
   </div> 
