@@ -1,3 +1,3 @@
-# itamblyn.github.io
+# itambly.io
 
 Website source
