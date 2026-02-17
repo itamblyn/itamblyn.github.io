@@ -135,54 +135,23 @@ function closesubnav(event){
   <h3 style="color: #334d55; margin-top: 0; margin-bottom: 15px;">Citation Statistics</h3>
   <div id="scholar-stats-container" style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
     <div class="stat-card" style="background: white; padding: 15px 25px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-align: center; min-width: 120px;">
-      <div id="stat-citations" style="font-size: 28px; font-weight: bold; color: #005FA9;">--</div>
+      <div style="font-size: 28px; font-weight: bold; color: #005FA9;">3,622</div>
       <div style="font-size: 13px; color: #666; margin-top: 4px;">Total Citations</div>
     </div>
     <div class="stat-card" style="background: white; padding: 15px 25px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-align: center; min-width: 120px;">
-      <div id="stat-hindex" style="font-size: 28px; font-weight: bold; color: #005FA9;">--</div>
+      <div style="font-size: 28px; font-weight: bold; color: #005FA9;">32</div>
       <div style="font-size: 13px; color: #666; margin-top: 4px;">h-index</div>
     </div>
     <div class="stat-card" style="background: white; padding: 15px 25px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-align: center; min-width: 120px;">
-      <div id="stat-papers" style="font-size: 28px; font-weight: bold; color: #005FA9;">--</div>
-      <div style="font-size: 13px; color: #666; margin-top: 4px;">Papers</div>
+      <div style="font-size: 28px; font-weight: bold; color: #005FA9;">60</div>
+      <div style="font-size: 13px; color: #666; margin-top: 4px;">i10-index</div>
     </div>
   </div>
   <div style="font-size: 13px; color: #666;">
-    Data from <a href="https://scholar.google.com/citations?user=aE2I09cAAAAJ&hl=en" target="_blank" style="color: #005FA9; font-weight: bold;">Google Scholar</a> via Semantic Scholar API &mdash; updates automatically.
+    Source: <a href="https://scholar.google.com/citations?user=aE2I09cAAAAJ&hl=en" target="_blank" style="color: #005FA9; font-weight: bold;">Google Scholar</a>.
     <a href="https://scholar.google.com/citations?user=aE2I09cAAAAJ&hl=en" target="_blank" style="color: #005FA9; margin-left: 8px;">View full Google Scholar profile &rarr;</a>
   </div>
 </div>
-
-<script>
-(function() {
-  // Fetch citation stats from Semantic Scholar API
-  var AUTHOR_QUERY = 'https://api.semanticscholar.org/graph/v1/author/search?query=Isaac+Tamblyn&fields=name,citationCount,hIndex,paperCount';
-
-  fetch(AUTHOR_QUERY)
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      if (data && data.data && data.data.length > 0) {
-        // Find the correct author (match by name)
-        var author = data.data.find(function(a) {
-          return a.name && a.name.toLowerCase().indexOf('isaac') !== -1 && a.name.toLowerCase().indexOf('tamblyn') !== -1;
-        }) || data.data[0];
-
-        if (author.citationCount != null) {
-          document.getElementById('stat-citations').textContent = author.citationCount.toLocaleString();
-        }
-        if (author.hIndex != null) {
-          document.getElementById('stat-hindex').textContent = author.hIndex;
-        }
-        if (author.paperCount != null) {
-          document.getElementById('stat-papers').textContent = author.paperCount;
-        }
-      }
-    })
-    .catch(function() {
-      // Silently fail - stat cards will show '--' placeholders
-    });
-})();
-</script>
 <!-- End Google Scholar Citation Statistics -->
 
 <ol>
