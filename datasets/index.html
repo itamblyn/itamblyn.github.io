@@ -125,23 +125,94 @@ function closesubnav(event){
     <div class="story">
 
 <h1>Datasets from articles</h1>
-(for code repositories, see <a href="../codes.html">here</a>)
+<p>For code repositories, see <a href="../codes.html">Codes and Computing</a>.</p>
 
+<h3>Schr&#246;dinger equation dataset</h3>
+<p>
+Numerical solutions of the time-independent Schr&#246;dinger equation for an electron in 2D confining potentials, used to train deep convolutional neural networks. The dataset contains millions of solved instances across four classes of electrostatic potentials (simple harmonic oscillator, infinite well, double inverted Gaussians, and random potentials). Each entry includes the potential, ground-state wave function, and associated energies.
+</p>
 <ul>
- <li> <a href="https://doi.org/10.4224/PhysRevA.96.042113.data">Schr&#246;dinger dataset</a>
- <li>Deep learning and density functional theory (LDA, PBE, MGGA-Pittalis) 
-   <br> Use this script if you want to download via command line: <a href="cli_download_from_gdrive.sh">cli_download_from_gdrive.sh</a> 
-   <br> Use this link if you want to mount to your Google Drive (e.g. for Google Colab): <a href="https://drive.google.com/drive/folders/1SkT5U9kDaiuNpTzJHMQZci2JVhSPj-Gm?usp=sharing">Google drive link</a>
- <li> <a href="https://drive.google.com/drive/folders/1aJ2HeaIjo-4H6vFRzO6rhmIoJ-_RAyTd?usp=sharing">Deep learning and high harmonic generation</a>
- <li> <a href="https://drive.google.com/drive/folders/1Wnd8kgCrDWru8J4eJ5LBkvHkYA_veaMz?usp=sharing">Unsupervised Hyperspectral Stimulated Raman Microscopy Image Enhancement: De-Noising and Segmentation via One-Shot Deep Learning</a>
- <li> <a href="https://drive.google.com/open?id=1VLdVwJTht-AhLb1IJWIX2hxHLYfyXGDM">Big graphene dataset</a>
-<!--- <li>QM9 test set evaluated with MP2 (133,885 molecules) = check back soon! --->
+ <li><b>Size:</b> ~700 GB total (411 HDF5 files across 5 ZIP archives); sample dataset of 8.5 GB also available</li>
+ <li><b>Format:</b> HDF5 (<code>.h5</code>), compressed as ZIP</li>
+ <li><b>Paper:</b> K. Mills, M. Spanner, I. Tamblyn, <i>Deep learning and the Schr&#246;dinger equation</i>, Physical Review A <b>96</b>, 042113 (2017). <a href="https://doi.org/10.1103/PhysRevA.96.042113">DOI</a></li>
+ <li><b>Download:</b> <a href="https://doi.org/10.4224/PhysRevA.96.042113.data">NRC Digital Repository</a></li>
 </ul>
-<h1>Reinforcement learning environments</h1>
+
+<h3>Deep learning and density functional theory</h3>
+<p>
+Self-consistent charge densities and energy components (correlation, exchange, external, kinetic, and total energies) for multielectron systems computed with three exchange-correlation functionals: LDA, PBE, and MGGA-Pittalis. Systems include 1, 2, 3, and 10 electrons in both simple harmonic oscillator (SHO) and random (RND) external potentials.
+</p>
 <ul>
- <li><a href="https://github.com/CLEANit/SubWorld_DP">SubWorld</a>
- <li><a href="https://ChemGymRl.com">Chemistry Labs - ChemGymRL.com</a>
- <li><a href="https://github.com/CLEANit/heatenginegym">Heat engines</a>
+ <li><b>Size:</b> <code>SHO_10e.h5</code> is ~100 GB; smaller variants for 1, 2, and 3 electrons also available</li>
+ <li><b>Format:</b> HDF5 (<code>.h5</code>)</li>
+ <li><b>Files:</b> <code>SHO_10e</code>, <code>SHO_3e</code>, <code>SHO_2e</code>, <code>SHO_1e</code>, <code>RND_10e</code>, <code>RND_3e</code>, <code>RND_2e</code>, <code>RND_1e</code></li>
+ <li><b>Paper:</b> K. Ryczko, D.A. Strubbe, I. Tamblyn, <i>Deep learning and density-functional theory</i>, Physical Review A <b>100</b>, 022512 (2019). <a href="https://doi.org/10.1103/PhysRevA.100.022512">DOI</a></li>
+ <li><b>Download:</b> <a href="https://drive.google.com/drive/folders/1SkT5U9kDaiuNpTzJHMQZci2JVhSPj-Gm?usp=sharing">Google Drive</a> | Command-line script: <a href="cli_download_from_gdrive.sh">cli_download_from_gdrive.sh</a></li>
+</ul>
+
+<h3>Deep learning and high harmonic generation</h3>
+<p>
+Training data for deep neural networks applied to high harmonic generation (HHG). Contains time-dependent dipoles and spectra from reduced-dimensionality models of di- and triatomic systems, parameterized by laser pulse intensity, internuclear distance, and molecular orientation. Includes data for both the forward problem (molecular parameters to spectra) and the inverse problem (spectra to molecular parameters).
+</p>
+<ul>
+ <li><b>Format:</b> Numerical data files with accompanying Jupyter notebooks (TensorFlow/Keras)</li>
+ <li><b>Paper:</b> M. Lytova, M. Spanner, I. Tamblyn, <i>Deep learning and high harmonic generation</i>, Canadian Journal of Physics <b>101</b>(3) (2022). <a href="https://doi.org/10.1139/cjp-2022-0115">DOI</a></li>
+ <li><b>Download:</b> <a href="https://drive.google.com/drive/folders/1aJ2HeaIjo-4H6vFRzO6rhmIoJ-_RAyTd?usp=sharing">Google Drive</a> | Code: <a href="https://github.com/CLEANit/HHG">GitHub</a></li>
+</ul>
+
+<h3>Hyperspectral stimulated Raman microscopy</h3>
+<p>
+Hyperspectral stimulated Raman scattering (SRS) microscopy image data of a lithium ore sample. Used to demonstrate UHRED (Unsupervised Hyperspectral Resolution Enhancement and Denoising), an unsupervised deep learning method for automatic denoising that requires only a single hyperspectral image (one-shot, no labelled training data needed). Combined with k-means clustering, the method produces automatic chemical species maps.
+</p>
+<ul>
+ <li><b>Format:</b> Hyperspectral image data (3D arrays: x, y, spectral channels)</li>
+ <li><b>Paper:</b> P. Abdolghader, G. Resch, A. Ridsdale, T. Grammatikopoulos, F. L&#233;gar&#233;, A. Stolow, A.F. Pegoraro, I. Tamblyn, <i>Unsupervised Hyperspectral Stimulated Raman Microscopy Image Enhancement: De-Noising and Segmentation via One-Shot Deep Learning</i>, Optics Express <b>29</b>(21), 34205-34219 (2021). <a href="https://doi.org/10.1364/OE.439662">DOI</a></li>
+ <li><b>Download:</b> <a href="https://drive.google.com/drive/folders/1Wnd8kgCrDWru8J4eJ5LBkvHkYA_veaMz?usp=sharing">Google Drive</a> | Code: <a href="https://github.com/CLEANit/SRS2021">GitHub</a></li>
+</ul>
+
+<h3>Big graphene dataset</h3>
+<p>
+Over 500,000 density functional theory calculations of graphene structures (3.5 nm x 3.5 nm unit cell, 60-atom systems) with random structural defects, computed using the PBE functional in VASP. Each entry contains carbon atom coordinates and total energy values. Used to demonstrate that extensive deep neural networks (EDNNs) trained on small systems can predict total energies of larger systems in ~57 ms with DFT-level accuracy.
+</p>
+<ul>
+ <li><b>Size:</b> ~3.7 GB compressed; 501,473 training files and 60,744 testing files</li>
+ <li><b>Format:</b> HDF5 (<code>.h5</code>), distributed as <code>.tar.gz</code></li>
+ <li><b>Paper:</b> K. Mills, M. Spanner, I. Tamblyn, <i>Extensive deep neural networks for transferring small scale learning to large scale systems</i>, Chemical Science <b>10</b>(15), 4129-4140 (2019). <a href="https://doi.org/10.1039/C8SC04578J">DOI</a></li>
+ <li><b>License:</b> Open Government Licence - Canada / CC BY 2.0</li>
+ <li><b>Download:</b> <a href="https://drive.google.com/open?id=1VLdVwJTht-AhLb1IJWIX2hxHLYfyXGDM">Google Drive</a> | <a href="https://doi.org/10.4224/c8sc04578j.data">NRC Digital Repository</a></li>
+</ul>
+
+</div>
+
+<div class="story">
+<h1>Reinforcement learning environments</h1>
+
+<h3>SubWorld</h3>
+<p>
+A procedurally generated nautical navigation environment for reinforcement learning under partial observability (POMDPs). Agents navigate through water currents around islands while dealing with incomplete state information, combining state-modifying actions with information-revealing measurement actions. Demonstrates that dynamic programming with partial information can construct safe navigation policies while reducing measurement costs.
+</p>
+<ul>
+ <li><b>Paper:</b> C. Beeler, X. Li, C. Bellinger, M. Crowley, M. Fraser, I. Tamblyn, <i>Dynamic programming with incomplete information to overcome navigational uncertainty in POMDPs</i>, Proceedings of the Canadian Conference on Artificial Intelligence (2024). <a href="https://arxiv.org/abs/2112.14657">arXiv</a></li>
+ <li><b>Code:</b> <a href="https://github.com/CLEANit/SubWorld_DP">GitHub</a></li>
+</ul>
+
+<h3>ChemGymRL</h3>
+<p>
+An open-source framework providing customizable virtual chemistry laboratory benches where RL agents learn to perform chemical synthesis and material discovery tasks. Built on the Gymnasium API, it includes reaction, extraction, distillation, and characterization benches, plus a Lab Manager for orchestrating multi-agent workflows.
+</p>
+<ul>
+ <li><b>Paper:</b> C. Beeler, S.G. Subramanian, K. Sprague, <i>et al.</i>, <i>ChemGymRL: An Interactive Framework for Reinforcement Learning for Digital Chemistry</i>, Digital Discovery (2024). <a href="https://doi.org/10.1039/D3DD00183K">DOI</a></li>
+ <li><b>Website:</b> <a href="https://ChemGymRL.com">ChemGymRL.com</a> | Code: <a href="https://github.com/chemgymrl/chemgymrl">GitHub</a></li>
+</ul>
+
+<h3>Heat engine gym</h3>
+<p>
+A collection of 11 OpenAI Gym environments modeling thermodynamic heat engines. Agents learn to discover optimal thermodynamic cycles (Carnot, Stirling, Otto) by performing isothermal, adiabatic, and irreversible processes. Using evolutionary RL, the agents discovered a previously unknown thermodynamic cycle.
+</p>
+<ul>
+ <li><b>Environments:</b> Carnot-v0 through v4, Stirling-v0/v1, Otto-v0/v1, Beeler-v0/v1</li>
+ <li><b>Paper:</b> C. Beeler, U. Yahorau, R. Coles, K. Mills, S. Whitelam, I. Tamblyn, <i>Optimizing thermodynamic trajectories using evolutionary and gradient-based reinforcement learning</i>, Physical Review E <b>104</b>, 064128 (2021). <a href="https://doi.org/10.1103/PhysRevE.104.064128">DOI</a></li>
+ <li><b>Code:</b> <a href="https://github.com/CLEANit/heatenginegym">GitHub</a></li>
 </ul>
 
 </div>
