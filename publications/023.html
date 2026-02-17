@@ -13,9 +13,9 @@ var time = 3000;
 var numofitems = 3;
 
 //menu constructor
-function menu(allitems,thisitem,startstate){ 
+function menu(allitems,thisitem,startstate){
   callname= "gl"+thisitem;
-  divname="subglobal"+thisitem;  
+  divname="subglobal"+thisitem;
 this.numberofmenuitems = numofitems;
   this.caller = document.getElementById(callname);
   this.thediv = document.getElementById(divname);
@@ -30,7 +30,7 @@ function ehandler(event,theobj){
   }
   theobj.thediv.style.visibility="visible";
 }
-				
+
 function closesubnav(event){
   if ((event.clientY <48)||(event.clientY > 107)){
     for (var i=1; i<= numofitems; i++){
@@ -59,7 +59,7 @@ function closesubnav(event){
 
 
 </head>
-<body onmousemove="closesubnav(event);"> 
+<body onmousemove="closesubnav(event);">
 <div class="skipLinks">skip to: <a href="#content">page content</a> | <a href="pageNav">links on this page</a> | <a href="#globalNav">site navigation</a> | <a href="#siteInfo">footer (site information)</a> </div>
 <!-- Start nav bar -->
 <div id="masthead">
@@ -98,9 +98,9 @@ function closesubnav(event){
   <img alt="" src="../tl_curve_white.gif" height="6" width="6" id="tl"> <img alt="" src="../tr_curve_white.gif" height="6" width="6" id="tr">
   <div id="breadCrumb">
   </div>
-  <div id="pageName"> 
+  <div id="pageName">
     <h2>Manuscript Summary
-  </div> 
+  </div>
 <!-- Start side bar -->
 <div id="pageNav">
     <div id="sectionLinks">
@@ -125,26 +125,31 @@ function closesubnav(event){
 <div id="content">
     <div class="story">
 
-<table width="*">  
+<table width="*">
   <tr>
-    <!--Insert image here.-->
-  	    <!--<td>
-	       <img src="images/DARWIN.png">
-	    </td>
- 
-    <td>-->
+    <td>
+       <img src="../group/images/itamblyn/SOFRSH.png" width="400">
+    </td>
+    <td>
 
-Manuscript summary coming soon.
+<b>Simultaneous determination of structures, vibrations, and frontier orbital energies from a self-consistent range-separated hybrid functional</b>
+<br><br>
+I. Tamblyn, S. Refaely-Abramson, J.B. Neaton, and L. Kronik
+<br><br>
+<i>Journal of Physical Chemistry Letters</i>, 5, 2734 (2014)
+<br><br>
+
+Achieving accurate predictions of molecular geometries, vibrational properties, and ionization energies simultaneously using a single theoretical approach has been a longstanding challenge in computational chemistry. In this work, we develop a self-consistent optimally tuned range-separated hybrid (scOT-RSH) density functional theory approach that addresses this challenge. The key innovation involves systematically optimizing the range-separation parameter to satisfy the ionization energy theorem while simultaneously minimizing interatomic forces. Benchmarking against the G2 test set, the scOT-RSH approach achieves a mean absolute error of only 0.2 eV relative to experimental ionization energies, compared to 2.96 eV with the widely used B3LYP functional, while molecular geometries remain comparable to B3LYP results. This methodology establishes a new paradigm in which accurate geometries and ionization energies can be predicted simultaneously from a single functional approach with enhanced reliability.
 
 <p>
 <br>
-<br><a href="a">Open Access Link</a>
+<br><a href="https://doi.org/10.1021/jz5010939" target="new window">Journal Link</a> | <a href="https://nrc-publications.canada.ca/eng/view/object/?id=b4354087-b275-4f95-bd13-295106a04672" target="new window">Open Access Link</a>
 <br>
-</p>   
+</p>
     </td>
-  </tr> 
+  </tr>
 </table>
-	
+
 </div>
 </div>
 
@@ -162,8 +167,8 @@ Manuscript summary coming soon.
 
 </div>
 </div>
-</di>
-<br> 
+</div>
+<br>
 <script type="text/javascript">
     <!--
       var menuitem1 = new menu(7,1,"hidden");
@@ -174,6 +179,6 @@ Manuscript summary coming soon.
 			var menuitem6 = new menu(7,6,"hidden");
 			var menuitem7 = new menu(7,7,"hidden");
     // -->
-    </script> 
+    </script>
 </body>
 </html>

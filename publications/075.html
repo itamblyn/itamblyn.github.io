@@ -13,9 +13,9 @@ var time = 3000;
 var numofitems = 3;
 
 //menu constructor
-function menu(allitems,thisitem,startstate){ 
+function menu(allitems,thisitem,startstate){
   callname= "gl"+thisitem;
-  divname="subglobal"+thisitem;  
+  divname="subglobal"+thisitem;
 this.numberofmenuitems = numofitems;
   this.caller = document.getElementById(callname);
   this.thediv = document.getElementById(divname);
@@ -30,7 +30,7 @@ function ehandler(event,theobj){
   }
   theobj.thediv.style.visibility="visible";
 }
-				
+
 function closesubnav(event){
   if ((event.clientY <48)||(event.clientY > 107)){
     for (var i=1; i<= numofitems; i++){
@@ -59,7 +59,7 @@ function closesubnav(event){
 
 
 </head>
-<body onmousemove="closesubnav(event);"> 
+<body onmousemove="closesubnav(event);">
 <div class="skipLinks">skip to: <a href="#content">page content</a> | <a href="pageNav">links on this page</a> | <a href="#globalNav">site navigation</a> | <a href="#siteInfo">footer (site information)</a> </div>
 <!-- Start nav bar -->
 <div id="masthead">
@@ -98,9 +98,9 @@ function closesubnav(event){
   <img alt="" src="../tl_curve_white.gif" height="6" width="6" id="tl"> <img alt="" src="../tr_curve_white.gif" height="6" width="6" id="tr">
   <div id="breadCrumb">
   </div>
-  <div id="pageName"> 
+  <div id="pageName">
     <h2>Manuscript Summary
-  </div> 
+  </div>
 <!-- Start side bar -->
 <div id="pageNav">
     <div id="sectionLinks">
@@ -125,26 +125,31 @@ function closesubnav(event){
 <div id="content">
     <div class="story">
 
-<table width="*">  
+<table width="*">
   <tr>
-    <!--Insert image here.-->
-  	    <!--<td>
-	       <img src="images/DARWIN.png">
-	    </td>
- 
-    <td>-->
+    <td>
+       <img src="images/075.png" width="400">
+    </td>
+    <td>
 
-Manuscript summary coming soon.
+<b>Dynamic Observation Policies in Observation Cost-Sensitive Reinforcement Learning</b>
+<br><br>
+C. Bellinger, M. Crowley, I. Tamblyn
+<br><br>
+<i>Workshop on Advancing Neural Network Training: Computational Efficiency, Scalability, and Resource Optimization</i> (2023)
+<br><br>
+
+Standard reinforcement learning assumes that environmental state measurements are freely available at every time step, but in many real-world domains such as materials design, deep-sea exploration, and medicine, observations carry substantial costs. In this work, we introduce the Deep Dynamic Multi-Step Observationless Agent (DMSOA), which learns dynamic observation policies that strategically decide when to measure the environment versus acting based on prior knowledge. Rather than observing at every step, DMSOA enables agents to make decisions across multiple steps without fresh state information, explicitly balancing the tradeoff between measurement costs and decision quality. Evaluated on OpenAI Gym control tasks and Atari Pong, DMSOA learns better policies with fewer decision steps and measurements than existing alternatives from the literature, demonstrating that intelligent observation scheduling can significantly reduce sensing costs without sacrificing control performance.
 
 <p>
 <br>
-<br><a href="a">Open Access Link</a>
+<br><a href="https://doi.org/10.48550/arXiv.2307.02620" target="new window">Journal Link</a> | <a href="https://doi.org/10.48550/arXiv.2307.02620" target="new window">Open Access Link</a>
 <br>
-</p>   
+</p>
     </td>
-  </tr> 
+  </tr>
 </table>
-	
+
 </div>
 </div>
 
@@ -162,8 +167,8 @@ Manuscript summary coming soon.
 
 </div>
 </div>
-</di>
-<br> 
+</div>
+<br>
 <script type="text/javascript">
     <!--
       var menuitem1 = new menu(7,1,"hidden");
@@ -174,6 +179,6 @@ Manuscript summary coming soon.
 			var menuitem6 = new menu(7,6,"hidden");
 			var menuitem7 = new menu(7,7,"hidden");
     // -->
-    </script> 
+    </script>
 </body>
 </html>
